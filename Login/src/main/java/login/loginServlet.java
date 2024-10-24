@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.sql.*;
 import com.mysql.cj.protocol.Resultset;
 
 
@@ -21,22 +21,23 @@ public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static String  LOAD_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static String URL = "jdbc:mysql://localhost:3306/volunteerdb";
-    public static String PASSWORD="983223@Raj";
+    public static String PASSWORD="root";
     public static String USERNAME = "root";
     Connection connection;
     public loginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	
-    
     
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -58,9 +59,9 @@ public class loginServlet extends HttpServlet {
 					String name = rSet.getString("name");
 	                String age = rSet.getString("age");
 	                String address = rSet.getString("address");
-	                String aadhaar = rSet.getString("aadhaarNumber");
-	                String email = rSet.getString("emailId");
-	                String phone = rSet.getString("phoneNumber");
+	                String aadhaar = rSet.getString("addhaar");
+	                String email = rSet.getString("email");
+	                String phone = rSet.getString("phone");
 
 	                out.println("<html><head>");
 	                out.println("<title>Welcome Page</title>");

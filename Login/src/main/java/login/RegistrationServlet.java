@@ -17,7 +17,7 @@ public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static String  LOAD_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static String URL = "jdbc:mysql://localhost:3306/volunteerdb";
-    public static String PASSWORD="983223@Raj";
+    public static String PASSWORD="root";
     public static String USERNAME = "root";
     Connection connection;
     public RegistrationServlet() {
@@ -27,14 +27,20 @@ public class RegistrationServlet extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		
 		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		// TODO Auto-generated method stub
 		String userNameString = request.getParameter("username");
 		String passwordString = request.getParameter("password");
