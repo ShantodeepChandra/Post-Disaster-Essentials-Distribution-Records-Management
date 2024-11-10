@@ -82,7 +82,8 @@ public class loginServlet extends HttpServlet {
 	                out.println("<div class='details'><h4>Aadhaar Number:</h4><p>" + aadhaar + "</p></div>");
 	                out.println("<div class='details'><h4>Email ID:</h4><p>" + email + "</p></div>");
 	                out.println("<div class='details'><h4>Phone Number:</h4><p>" + phone + "</p></div>");
-	                
+	                out.println("<form method=\"get\" action=\"Delivary\"><button type=\"submit\">procced</button></form>");
+//	                out.println("<a href=\"delivary.html\">procced</a>");
 	                out.println("</div></body></html>");
 				}else {
 					out.println("<html><body><center><h3>Incorrect Password</h3></center></body></html>");

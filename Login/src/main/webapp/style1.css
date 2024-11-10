@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.2s ease; /* Smooth transition effect */
+    transition: all 0.3s ease; /* Smooth transition effect */
 }
 
 body {
-    font-family: 'Monotype Corsiva', cursive; /* Cursive font */
-    font-size: 25px;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    font-family: 'BrushScript MT', cursive; /* Cursive font */
+    font-size: 14px;
+    background: linear-gradient(145deg, #6cde2f, #23a479, #d00b0b, #8031ab);
     background-size: 400% 400%; /* Ensures the gradient covers the full background */
-    animation: gradientAnimation 15s ease infinite; /* Animation to change colors */
+    animation: gradientAnimation 2s ease infinite; /* Animation to change colors */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,33 +23,54 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-.login-container {
-    background-color: rgba(130, 187, 199, 0.967);
-    padding: 40px;
-    border-radius: 50px;
-    box-shadow: 2 15px 25px rgba(0, 0, 0, 0.2);
-    width: 50%;
-    text-align: center;
-    transition: box-shadow 0.45s ease;
-}
-.login-container :hover{
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: normal;
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth transition for color and font weight */
 }
 
+.input-group input:focus + label {
+    color: rgb(50, 203, 139); /* Changes label color to violet when input is focused */
+    font-weight: bold; /* Makes the label bold when input is focused */
+}
 h2 {
     margin-bottom: 40px;
     color: #64067c;
 }
 
+body {
+    background-color: #f8f9fa;
+}
+.form-container {
+    margin-top: 50px;
+    height: 10px;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #343a40;
+}
+.custom-file-label::after {
+    content: "Browse";
+}
 .input-group {
     margin-bottom: 15px;
     text-align: left;
+    position: relative;
+    width:80%;
+    max-width: 400px;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
     color: #555;
+    font-weight: normal;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .input-group input {
