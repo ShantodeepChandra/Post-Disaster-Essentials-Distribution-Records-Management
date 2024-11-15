@@ -1,97 +1,129 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    transition: all 0.2s ease; /* Smooth transition effect */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Monotype Corsiva', cursive; /* Cursive font */
-    font-size: 25px;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
-    background-size: 400% 400%; /* Ensures the gradient covers the full background */
-    animation: gradientAnimation 15s ease infinite; /* Animation to change colors */
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('B.jpg');
+    background-size: cover;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.glass-container {
+    width: 350px;
+    height: 420px;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #fff;
 }
 
-.login-container {
-    background-color: rgba(130, 187, 199, 0.967);
-    padding: 40px;
-    border-radius: 50px;
-    box-shadow: 2 15px 25px rgba(0, 0, 0, 0.2);
-    width: 50%;
+.glass-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.login-box {
+    max-width: 250px;
+    margin: 0 auto;
     text-align: center;
-    transition: box-shadow 0.45s ease;
-}
-.login-container :hover{
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 h2 {
-    margin-bottom: 40px;
-    color: #64067c;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.input-group input {
-    width: 100%;
+input {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #ff7e5f; /* Change border color on focus */
-}
-
-.login-btn {
-    width: 100%;
-    padding: 20px;
-    background-color: #0d12aa;
+    margin-top: 25px;
     border: none;
-    border-radius: 5px;
-    color: #b7d813;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 13px;
 }
 
-.login-btn:hover {
-    background-color: #4cae4c;
+input::placeholder {
+    color: #fff;
 }
 
-.register-option {
-    margin-top: 10px;
-    color: #666;
+input:focus {
+    outline: none;
 }
 
-.register-option a {
-    color: #5cb85c;
+.options {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: white;
+}
+
+.options input {
+    margin-right: 5px;
+    margin-top: 0px;
+}
+
+.options a {
     text-decoration: none;
+    color: white;
+    margin-left: auto;
+}
+
+button {
+    background: #fff;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.Sun{
+	color:white;
+}
+button:hover {
+    background: transparent;
+    color: white;
+    outline: 1px solid #fff;
+}
+
+p {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#register {
+    text-decoration: none;
+    color: #fff;
     font-weight: bold;
 }
-
-.register-option a:hover {
-    text-decoration: underline;
-    color: #ff7e5f;
+a{
+    color: rgb(128, 0, 0)
+}
+a:hover{
+    color: #e14107
 }

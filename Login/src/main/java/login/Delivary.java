@@ -40,9 +40,10 @@ public class Delivary extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Redirect to an HTML page
-        response.sendRedirect("delivary.html");  // Replace "yourpage.html" with the path to your HTML file
+        response.sendRedirect("Deli.html");  // Replace "yourpage.html" with the path to your HTML file
     }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String stateString = request.getParameter("state");
 		String districtString = request.getParameter("district");
 //		int population = Integer.parseInt(request.getParameter("headcount"));
@@ -58,8 +59,9 @@ public class Delivary extends HttpServlet {
 			preparedStatement.setString(4, messageString);
             preparedStatement.executeUpdate();
 			
-			pWriter.println("<h1>Regitration Successfully done</h1>");
-			pWriter.println("<a href=index.html>Login</a>");
+//			pWriter.println("<h1>Regitration Successfully done</h1>");
+//			pWriter.println("<a href=index.html>Login</a>");
+            response.sendRedirect("Success.html");
 		} catch (Exception e) {
 			e.printStackTrace();
 			pWriter.println("<h3>Error: " + e.getMessage() + "</h3>");

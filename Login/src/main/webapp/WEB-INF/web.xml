@@ -7,7 +7,6 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
-    <welcome-file>delivary.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   <servlet>
@@ -39,5 +38,25 @@
   <servlet-mapping>
     <servlet-name>Delivary</servlet-name>
     <url-pattern>/Delivary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Edit</display-name>
+    <servlet-name>Edit</servlet-name>
+    <servlet-class>login.Edit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Edit</servlet-name>
+    <url-pattern>/Edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Delete</display-name>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>login.Delete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/Delete</url-pattern>
   </servlet-mapping>
 </web-app>

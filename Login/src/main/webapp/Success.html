@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="2; URL=/Login">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Success Page</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 300px;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+}
+.top{
+    height: 25vh;
+    width: 100%;
+    background-color: #48ca24;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+.fa-regular{
+    font-size: 40px;
+    margin-top: 7vh;
+}
+h3{
+    margin-top: 20px;
+}
+p{
+    margin-top: 5vh;
+    padding: 0px 10px;
+    color: #333;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    color: white;
+    background-color: #48ca24;
+}
+button:hover{
+    background-color: #135401;
+    cursor: pointer;
+}
+a{
+color: white;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <i class="fa-regular fa-circle-check"></i>
+        <h3>SUCCESS</h3>
+    </div>
+    <div class="bottom">
+        <p>Sucessfully relief deliverd</p><br>
+        <p>Thank You</p>
+        <button> <a href="index.html">Back To Login</a> </button>
+    </div>
+</div>
+<!--<h1>Registration Completed</h1>-->
+<!--<p>You have successfully registered. Redirecting to login page...</p>-->
+<!--<p>If you're not redirected, <a th:href="@{/login/User-Login}">click here</a>.</p>-->
+</body>
+</html>
